@@ -1,5 +1,6 @@
 
-      body {
+
+    body {
           background-image: url('https://bkpsitecpsnew.blob.core.windows.net/uploadsitecps/sites/1/2023/02/ArteConceitual-ArduinoPratica-scaled.jpg');
         background-size: cover;        /* gambar memenuhi layar tapi proporsional */
   background-position: center;   /* fokus di tengah */
@@ -12,7 +13,7 @@
       }
 
       h1 {
-        color: rgb(139, 0, 7);
+        color: rgb(0, 139, 0);
         text-align: center;
         text-shadow: 2px 2px 3px lightgray;
       }
@@ -54,4 +55,11 @@
       form input[type="submit"]:hover {
         background-color: #19a10d;
       }
-
+      p {
+        background-color: rgba(231, 6, 6, 0.8);
+        padding: 10px;
+        border-radius: 8px;
+      }
+      strong {
+        color: yellow;
+      }

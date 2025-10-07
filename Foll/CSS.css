@@ -1,4 +1,14 @@
 
+/* PS C:\dev\Belajar\Belajar_web> git init 
+Reinitialized existing Git repository in C:/dev/Belajar/Belajar_web/.git/
+PS C:\dev\Belajar\Belajar_web> ^C
+PS C:\dev\Belajar\Belajar_web> ^C
+PS C:\dev\Belajar\Belajar_web> git add . 
+PS C:\dev\Belajar\Belajar_web> git commit -m "YANG UBAH ADALAH CSS"
+[main 7161321] YANG UBAH ADALAH CSS
+ 1 file changed, 11 insertions(+), 3 deletions(-)
+PS C:\dev\Belajar\Belajar_web> git push -u origin main  */
+
 
     body {
           background-image: url('https://bkpsitecpsnew.blob.core.windows.net/uploadsitecps/sites/1/2023/02/ArteConceitual-ArduinoPratica-scaled.jpg');

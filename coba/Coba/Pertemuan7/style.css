@@ -274,3 +274,47 @@ footer .social-links a:hover {
         font-size: 2em;
     }
 }
+
+
+/* ========== Skills Section ========== */
+.skills-container {
+     background: linear-gradient(180deg, white, #e6f7ff); /* Gradient putih ke biru muda */
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 20px;
+  margin-top: 30px;
+}
+
+.skill {
+    background: linear-gradient(180deg, white, #e6f7ff); /* Gradient putih ke biru muda */
+  background: white;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(5, 230, 24, 0.1);
+  
+  transition: transform 0.3s, box-shadow 0.3s;
+  text-align: center;
+}
+
+.skill:hover {
+background-color: #e70b8b;
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(8, 143, 15, 0.2);
+}
+
+.skill i {
+    
+  font-size: 30px;
+  color: #492291;
+  margin-bottom: 10px;
+  display: block;
+  text-align: center;
+}
+
+#skills h2 {
+    
+  text-align: center;
+    color: var(--primary-color);
+    font-size: 2.5em;
+    animation: pulse 2s infinite ease-in-out; /* Animasi pulse untuk judul */
+}

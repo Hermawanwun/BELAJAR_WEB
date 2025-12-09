@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <title>DOM Manipulation</title>
+</head>
+<body>
+  <h1 id="title">Belajar DOM</h1>
+  <p class="info">Ini contoh manipulasi DOM.</p>
+
+  <button onclick="ubahJudul()">Ubah Judul</button>
+  <button onclick="ubahWarna()">Ubah Warna</button>
+  <button onclick="ubahParagraf()">Ubah Paragraf</button>
+  <button onclick="ubahTeks()">Ubah Teks (Paragraf)</button>
+
+  <script>
+    // getElementById → ubah judul
+    function ubahJudul() {
+      let judul = document.getElementById("title");
+      judul.innerHTML = "Judul Berubah!";
+    }
+
+    // getElementById → ubah warna judul
+    function ubahWarna() {
+      let judul = document.getElementById("title");
+      judul.style.color = "red";
+    }
+
+    // querySelector → ubah paragraf
+    function ubahParagraf() {
+      let paragraf = document.querySelector(".info");
+      paragraf.innerHTML = "Paragraf telah diubah menggunakan querySelector!";
+    }
+
+    // querySelector → ubah teks paragraf (tombol tambahan)
+    function ubahTeks() {
+      let paragraf = document.querySelector(".info");
+      paragraf.innerHTML = "Teks paragraf berhasil diubah oleh tombol Ubah Teks!";
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Kalkulator Sederhana</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="calculator">
+      <h2>Kalkulator</h2>
+      <input type="number" id="angka1" placeholder="Angka pertama" />
+      <input type="number" id="angka2" placeholder="Angka kedua" />
+
+      <button onclick="tambah()">Tambah</button>
+      <button onclick="kurang()">Kurang</button>
+      <button onclick="kali()">Kali</button>
+      <button onclick="bagi()">Bagi</button>
+
+      <p id="hasil">Hasil: -</p>
+
+      <h2>Validasi Form</h2>
+      <form onsubmit="return validasiForm()">
+        <input type="text" id="nama" placeholder="Nama" /><br />
+        <input type="email" id="email" placeholder="Email" /><br />
+        <input type="password" id="password" placeholder="Password" /><br />
+        <button type="submit">Daftar</button>
+      </form>
+
+      <p id="error" style="color: red"></p>
+    </div>
+    <script src="script.js"></script>
+    <script>
+      function tambah() {
+        const angka1 = parseFloat(document.getElementById("angka1").value);
+        const angka2 = parseFloat(document.getElementById("angka2").value);
+        const hasil = angka1 + angka2;
+        document.getElementById("hasil").innerText = "Hasil: " + hasil;
+      }
+
+      function kurang() {
+        const angka1 = parseFloat(document.getElementById("angka1").value);
+        const angka2 = parseFloat(document.getElementById("angka2").value);
+        const hasil = angka1 - angka2;
+        document.getElementById("hasil").innerText = "Hasil: " + hasil;
+      }
+
+      function kali() {
+        const angka1 = parseFloat(document.getElementById("angka1").value);
+        const angka2 = parseFloat(document.getElementById("angka2").value);
+        const hasil = angka1 * angka2;
+        document.getElementById("hasil").innerText = "Hasil: " + hasil;
+      }
+
+      function bagi() {
+        const angka1 = parseFloat(document.getElementById("angka1").value);
+        const angka2 = parseFloat(document.getElementById("angka2").value);
+        if (angka2 === 0) {
+          document.getElementById("hasil").innerText =
+            "Hasil: Tidak dapat membagi dengan nol";
+        } else {
+          const hasil = angka1 / angka2;
+          document.getElementById("hasil").innerText = "Hasil: " + hasil;
+        }
+      }
+    </script>
+
+    <script>
+      function validasiForm() {
+        let nama = document.getElementById("nama").value;
+        let email = document.getElementById("email").value;
+        let pass = document.getElementById("password").value;
+        let pesan = "";
+
+        if (nama === "") pesan += "Nama wajib diisi.<br>";
+        if (email.indexOf("@gmail.com") === -1)
+          pesan += "Email tidak valid.<br>";
+        if (pass.length < 6) pesan += "Password minimal 6 karakter.<br>";
+
+        if (pesan !== "") {
+          document.getElementById("error").innerHTML = pesan;
+          return false;
+        }
+        alert("Form berhasil dikirim!");
+        return true;
+      }
+    </script>
+  </body>
+</html>

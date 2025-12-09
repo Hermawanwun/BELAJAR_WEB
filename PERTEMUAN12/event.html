@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Validasi Form</title>
+  </head>
+  <body>
+    <button id="myButton">Klik Saya</button>
+    <script>
+      // Menambahkan event listener pada tombol
+      document
+        .getElementById("myButton")
+        .addEventListener("click", function () {
+          alert("Tombol telah diklik!");
+        });
+    </script>
+
+    <p>Ubah warna Bg</p>
+    <select onchange="ubahWarna(this.value)">
+      <option value="">Pilih Warna</option>
+      <option value="red">Merah</option>
+      <option value="green">Hijau</option>
+      <option value="blue">Biru</option>
+
+      <p>ubah bg</p>
+      <script>
+        function ubahWarna(warna) {
+          document.body.style.backgroundColor = warna;
+        }
+      </script>
+    </select>
+
+    <p>Hover Mouse</p>
+    <form onsubmit="return cekForm()">
+  Nama: <input type="text" id="nama"><br><br>
+  <button type="submit">Kirim</button>
+</form>
+
+<script>
+  function cekForm() {
+    let nama = document.getElementById("nama").value;
+    if (nama === "") {
+      alert("Nama tidak boleh kosong!");
+      return false; // cegah form terkirim
+    }
+    return true; // form terkirim
+  }
+</script>
+  </body>
+</html>

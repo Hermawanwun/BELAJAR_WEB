@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>Tugas Praktikum JavaScript</title>
+</head>
+<body>
+
+    <h2>Tugas Praktikum</h2>
+
+    <!-- Tombol Biodata -->
+    <button onclick="tampilBiodata()">Tampilkan Biodata</button>
+
+    <p id="biodata"></p>
+
+    <hr>
+
+    <!-- Hobi -->
+    <h3>Daftar Hobi:</h3>
+    <ul id="listHobi"></ul>
+
+    <script>
+        // ============================
+        // 1. Menampilkan Biodata
+        // ============================
+        function tampilBiodata() {
+            let nama = "Hermawan";
+            let nim = "23123456";
+            let prodi = "Teknik Informatika";
+
+            document.getElementById("biodata").innerHTML =
+                `Nama: ${nama} <br> NIM: ${nim} <br> Prodi: ${prodi}`;
+        }
+
+        // ============================
+        // 2. Fungsi Luas Persegi Panjang
+        // ============================
+        let panjang = 10;
+        let lebar = 5;
+
+        function hitungLuasPersegiPanjang(p, l) {
+            return p * l;
+        }
+
+        let hasilLuas = hitungLuasPersegiPanjang(panjang, lebar);
+        console.log("Luas Persegi Panjang = " + hasilLuas);
+
+        // ============================
+        // 3. Array Hobi + Tampilkan
+        // ============================
+        let hobi = ["Ngoding", "Desain UI/UX", "Gaming"];
+
+        let hobiList = document.getElementById("listHobi");
+
+        for (let i = 0; i < hobi.length; i++) {
+            let item = document.createElement("li");
+            item.textContent = hobi[i];
+            hobiList.appendChild(item);
+        }
+    </script>
+
+</body>
+</html>

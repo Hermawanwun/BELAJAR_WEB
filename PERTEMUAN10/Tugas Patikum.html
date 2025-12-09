@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Tugas Praktikum JavaScript</title>
+</head>
+<body>
+
+  <h2>Tugas Praktikum JavaScript</h2>
+
+  <pre id="output"></pre>
+
+  <script>
+    let out = document.getElementById("output");
+
+    function print(text) {
+      out.innerHTML += text + "\n";
+      console.log(text);
+    }
+
+    // ============================
+    // 1. Program Nilai (if else + switch)
+    // ============================
+
+    let nilai = 85;
+
+    print("=== 1. Cek Nilai ===");
+
+    // if else
+    if (nilai >= 90) {
+      print("If-Else: Nilai A");
+    } else if (nilai >= 80) {
+      print("If-Else: Nilai B");
+    } else if (nilai >= 70) {
+      print("If-Else: Nilai C");
+    } else {
+      print("If-Else: Nilai D");
+    }
+
+    // switch
+    let grade;
+
+    switch (true) {
+      case nilai >= 90:
+        grade = "A";
+        break;
+      case nilai >= 80:
+        grade = "B";
+        break;
+      case nilai >= 70:
+        grade = "C";
+        break;
+      default:
+        grade = "D";
+    }
+
+    print("Switch: Nilai " + grade);
+
+
+    // ============================
+    // 2. Array teman + for loop
+    // ============================
+
+    print("\n=== 2. Daftar Teman ===");
+
+    let teman = ["Rian", "Sinta", "Budi", "Lina", "Adit"];
+
+    for (let i = 0; i < teman.length; i++) {
+      print("Teman ke-" + (i+1) + ": " + teman[i]);
+    }
+
+
+    // ============================
+    // 3. Arrow Function luas lingkaran
+    // ============================
+
+    print("\n=== 3. Luas Lingkaran ===");
+
+    const luasLingkaran = (r) => 3.14 * r * r;
+
+    print("Luas lingkaran (r=7): " + luasLingkaran(7));
+
+
+    // ============================
+    // 4. Callback Function
+    // ============================
+
+    print("\n=== 4. Callback Function ===");
+
+    function tambah(a, b) {
+      return a + b;
+    }
+
+    function kali(a, b) {
+      return a * b;
+    }
+
+    function hitung(a, b, callback) {
+      return callback(a, b);
+    }
+
+    print("Hasil tambah: " + hitung(5, 3, tambah));
+    print("Hasil kali: " + hitung(5, 3, kali));
+
+  </script>
+
+</body>
+</html>
